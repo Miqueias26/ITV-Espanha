@@ -13,19 +13,42 @@
 <body>
     <div class="container-master">
         <header>
-            <h1>logo</h1>
+            <img src="src/assets/Blue Illustrative Car Rental Company Logo-Photoroom.png" alt="img-logo" width="200px">
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle bg-transparent border-0" type="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown button
+                    Menu
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#">Consulta</a></li>
+                    <li><a class="dropdown-item" href="#">Enlance DGT</a></li>
+                    <li><a class="dropdown-item" href="#">Sobre Nosotros</a></li>
                 </ul>
             </div>
         </header>
+
+        <div class="container">
+            <div class="formulario">
+                <form id="formularioDGT">
+                    <label for="tipodeveiculo">Tipo de Vehículo:</label>
+                    <input type="text" name="tipodeveiculo" id="tipodeveiculo" maxlength="20" required
+                        placeholder="Ej: Turismo">
+
+                    <br>
+
+                    <label for="year">Año de Matriculación:</label>
+                    <input type="number" name="ano" id="year" required placeholder="Ej: 2019" min="1900" max="2024">
+
+                    <br>
+
+                    <input type="submit" value="Consultar">
+                </form>
+                <button type="button" id="info">Ayuda para completar</button>
+                <div id="ajuda"></div>
+                <div id="resultado"></div>
+            </div>
+        </div>
+        <script src="script.js"></script>
 
     </div>
 

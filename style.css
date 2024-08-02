@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    /* Fontes e fallback */
 }
 
 html,
@@ -18,8 +19,10 @@ body {
 
 .container-master {
     width: 100%;
-    min-height: 100dvh;
-    padding: 1rem 4.4rem;
+    min-height: 100vh;
+    /* Ajuste para altura da tela */
+    padding: 1rem;
+    /* Reduzido padding para garantir bom espaçamento em telas pequenas */
 }
 
 header {
@@ -27,4 +30,124 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem;
+    /* Adiciona espaçamento ao redor do header */
+
+}
+
+h1 {
+    margin: 0;
+    /* Remove margem padrão */
+}
+
+h2 {
+    text-align: center;
+    color: rgb(29, 49, 136);
+}
+
+.container {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    color: rgb(18, 69, 170);
+    padding: 40px;
+    /* Reduzido padding para se ajustar melhor em telas menores */
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario {
+    width: 100%;
+    max-width: 500px;
+    /* Largura máxima ajustada */
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container-master {
+        padding: 0.5rem;
+        /* Menos padding em telas pequenas */
+    }
+
+    .formulario {
+        width: 90%;
+        max-width: none;
+        /* Remove a largura máxima para telas menores */
+    }
+
+    .container img {
+        width: 100%;
+        /* Imagem se ajusta ao tamanho do container */
+        max-width: 130px;
+        /* Tamanho máximo da imagem */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .formulario {
+        width: 80%;
+        max-width: 500px;
+        /* Ajuste a largura máxima em telas médias */
+    }
+}
+
+@media (min-width: 1025px) {
+    .formulario {
+        width: 60%;
+        /* Reduz a largura do formulário para telas grandes */
+        max-width: 700px;
+        /* Largura máxima ajustada */
+    }
+}
+
+.container img {
+    margin: 10px 0;
+}
+
+label,
+input,
+textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input[type="submit"] {
+    background-color: rgb(29, 49, 136);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(39, 59, 146);
+}
+
+#info {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    font-size: 0.9em;
+    background-color: white;
+    color: rgb(104, 104, 160);
+    font-style: italic;
 }
