@@ -14,7 +14,7 @@ document.getElementById('formularioDGT').addEventListener('submit', function(eve
     console.log (tipodeveiculo); // arameza o tipo de veiculo
 
     var ano = document.getElementById('year').value.trim(); // pega o ano de cadastro
-    console.log (ano); // armazena o mes de cadastro
+    console.log (ano); // armazena o mes de cadastros
     
    
 // VAR QUE ARMAZENA OS ANOS DOS VEICULOS INTERMEDIARIOS QUE ESTAO DENTRO DO PRAZO DE CIRCULACAO
@@ -59,7 +59,7 @@ document.getElementById('formularioDGT').addEventListener('submit', function(eve
         resultado.innerHTML = (`Según el año informe ${ano}, su vehículo (${tipodeveiculo}) tiene ${idadeveiculo} años y necesitaría realizar la primera inspección en ${primeirainspecao}. <br>
             <br>La segunda inspección se realiza dos años después de la primera, en este caso como la primiera ha sido en (${primeirainspecao}) la segunda sería en (${segundainspecao})<br>
             <br> Con carácter general, consulte las normas de tráfico de la DGT para obtener más detalles. <br>
-             <br> Es imprescindible que busque más información sobre su vehículo.`)
+             <br> Es imprescindible que busque más información sobre su vehículo!`)
            
     }
 
